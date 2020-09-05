@@ -28,6 +28,7 @@
        {
        //get timer show
        const showTime = document.getElementById('showTime');
+       let timerId;
       //style of start button
        const button = document.getElementById('button');
        button.addEventListener('mousedown',()=>{
@@ -40,7 +41,7 @@
        function timer(startTime){
           let now = Date.now()-startTime;
            timerId = setTimeout(()=>{
-            showTime.textContent = now.toFixed(2);
+            showTime.textContent = (now/1000).toFixed(2);
             timer(startTime);
           },200);
        }
@@ -77,9 +78,11 @@
          }
 
          setup(){
+           this.currentNum = 0;
            const board = document.getElementById('board');
            this.panels.forEach((panel)=>{
              board.appendChild(panel.getElement());
+             panel.getElement().classList.remove('pressed');
              panel.getElement().addEventListener('click',()=>{
                this.isFinished(panel.getElement().textContent);
                if(parseInt(panel.getElement().textContent) === this.currentNum){
@@ -97,7 +100,7 @@
          }
 
         isFinished(textContent){
-           if(textContent === '3'){
+           if(this.currentNum === parseInt(textContent) && this.currentNum === 3){
              clearTimeout(timerId);
            }
         }

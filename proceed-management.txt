@@ -7,3 +7,8 @@ add iniset function at Board 9/2/2020
 //  september 4
 1.format timer is done.
 2.cannot stop timer because of timerId is undefined !
+
+//september 5
+1.timer successfully finish at last button.
+2.start button resets game when pressed.
+init currentNum and clear timerId
