@@ -4,3 +4,45 @@ body{margin:0;
      text-align:center;
      color:#666;
      }
+#container{margin:10px auto;
+           width:100%;
+           height:400px;
+           background:#fdf;
+}
+.button{width:100px;
+       height:100px;
+       list-style-type:none;
+       line-height: 100px;
+       font-size:30px;
+       background:#34d;
+       box-shadow:0px 2px 0px #39d;
+       margin-top:10px;
+       color:#fff;
+       display:inline-block;
+       margin-left: 20px;
+}
+.pressed{background:#ddf;
+         box-shadow:none;
+
+
+}
+#button{width:150px;
+        height:45px;
+        background:#b44;
+        border-radius:5px;
+        margin:30px auto;
+        margin-bottom:5px;
+        color:#fff;
+        font-size:30px;
+        box-shadow: 0px 5px 0px #a99;
+        user-select:none;
+        cursor:pointer;
+        opacity:0.8;
+}
+#button:hover{opacity:1;
+}
+#button.btnPressed{margin-bottom: none;
+                   margin-top: 40px;
+                  color:#666;
+            box-shadow:0px 3px 3px #666 inset;
+}

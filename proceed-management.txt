@@ -1,0 +1,9 @@
+//add function of panels
+add iniset function at Board 9/2/2020
+ 1.need to format timer showing
+ 2.change isFinished method stop app when isFinished
+ add method a reset of currentNum,and stop timer
+
+//  september 4
+1.format timer is done.
+2.cannot stop timer because of timerId is undefined !
